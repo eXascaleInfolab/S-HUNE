@@ -26,7 +26,7 @@ for ww=1:num_walk
     end
 end
 
-% generate negative sample table
+% efficiently generate negative sample table
 [r,~] = find(network);
 tab_degree = tabulate(r);
 freq = tab_degree(:,3).^(0.75);

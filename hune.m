@@ -1,18 +1,20 @@
 function [embs,A] = hune(network, dim_emb, alpha_Katz, K_shited)
 % HUNE: factorization-based graph embedding
 
-
+% compute T_Katz
 sp_radius = abs(eigs(network,1));
 temp = inv(eye(size(network))-(alpha_Katz/sp_radius)*network);
 T_Katz = zeros(size(network));
 T_Katz = T_Katz + triu(temp) + triu(temp)'-eye(size(T_Katz)); % A = T_Katz;
-% issymmetric(T_Katz)
 
+% SPPMI transformation
 temp_mat = T_Katz;
 temp_mat = log(temp_mat*sum(sum(temp_mat))./(sum(temp_mat,2)*sum(temp_mat,1)))-log(K_shited);
 temp_mat = temp_mat-diag(diag(temp_mat));
 A = max(temp_mat,0);
 % length(find(A))
+
+% EVD
 if(length(find(A))==0)
     embs = NaN;
     disp('K_shifted is set too high, SPPMI matrix are all zeros!');

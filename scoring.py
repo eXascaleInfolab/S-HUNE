@@ -1,3 +1,4 @@
+# Using DeepWalk evaluation code
 #!/usr/bin/env python
 
 """scoring.py: Script that demonstrates the multi-label classification used."""

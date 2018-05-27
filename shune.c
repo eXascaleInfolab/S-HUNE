@@ -1,5 +1,3 @@
-//mex CFLAGS='$CFLAGS -lm -pthread -Ofast -march=native -Wall -funroll-loops -Wno-unused-result' w2v_SkipGram_Katz_negKdouble_walks_distributed_fastest.c
-
 #include "mex.h"
 #include "stdio.h"
 #include "stdlib.h"

@@ -5,11 +5,9 @@ This is the implementation for our S-HUNE graph embedding paper in MATLAB. It im
 How to use (Tested on MATLAB 2014b, 2017a and 2017b):
 - HUNE: 
 1. run experiment_HUNE_embs.m
-
 - SHUNE:
 1. Compile shune.c using mex: mex shune.c
 2. Run experiment_SHUNE_embs.m
-
 
 
 - Evaluation on the node classification task (classification evaluation using Deepwalk testing code: you need python with gensim, sklearn and scipy installed)

@@ -6,7 +6,7 @@ load('./blogcatalog.mat');
 alpha_Katz = 0.9;
 % Shifting parameter (\gamma in the paper)
 K_shifted = 1;
-% dimension of embeddings
+% dimension of embeddings (d in the paper)
 dim_emb = 128;
 
 % learn embeddings
